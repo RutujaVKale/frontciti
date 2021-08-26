@@ -1,0 +1,43 @@
+* {
+  display: flex;
+  background-color: black;
+}
+.bgimg {
+  background-position: center;
+
+  background-repeat: no-repeat;
+  height: 650px;
+
+  background-size: cover;
+  background-size: 100%;
+  background-image: url("../../../assets/kamalh.jpg");
+}
+
+.heading {
+  color: whitesmoke;
+  size: 500px;
+}
+
+.home {
+  display: flex;
+  width: 400px !important;
+  /* background-image: url("../../../assets/Homepage.png"); */
+}
+
+.welcome {
+  /* margin-left: 300px; */
+  color: #8040ad;
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  font-family: cursive;
+  line-height: 100px;
+  margin-left: 50px;
+  /* text-align: center; */
+  margin-right: 30px;
+}
+
+.textdowm {
+  font-size: medium;
+}

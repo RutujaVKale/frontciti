@@ -1,0 +1,9 @@
+.hover-class {
+  border: none;
+  color: whitesmoke;
+}
+
+.hover-class:hover {
+  background-color: #6170c7;
+  color: aliceblue;
+}

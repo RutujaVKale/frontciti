@@ -1,0 +1,32 @@
+.savebtn {
+  border: none;
+  border-radius: 5px;
+  background-color: #5d5bce;
+  color: azure;
+}
+
+.savebtn:hover {
+  border: none;
+  border-radius: 5px;
+  background-color: #76c988;
+  color: azure;
+}
+
+.loadingimg {
+  margin-left: 450px;
+  margin-top: 150px;
+  /* background-color: #f1f2f3; */
+}
+.texty {
+  margin-left: 250px;
+}
+
+.head {
+  margin-left: 300px;
+  color: rgb(63, 59, 126);
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-family: cursive;
+}

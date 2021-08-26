@@ -1,0 +1,34 @@
+<div class="head">  
+        <p>LARGE  CAP  NIFTY  STOCKS</p>    
+</div>
+<table class="table table-hover mt">
+    <tr class="tablehead">
+        <th scope="col">Company Name</th>
+        <th> Symbol</th>
+        <th>Price</th>
+        <th>Market Cap</th>
+        <th>Opening Price</th>
+        <th>Previous closing price</th>
+        <th>Dividend</th>
+        <th>Volume</th>
+        <th>Action</th>
+
+    </tr>
+    <!-- damn -->
+    <!-- table-info -->
+    <!-- id="{{'row'+i}}" -->
+    <tr class="" *ngFor="let obj of StocksArray; let i = index ">
+        <td id="name" class="">{{obj.companyName}}</td>
+        <td class="">{{obj.companySymbol}}</td>
+        <td class="">{{obj.price}}</td>
+        <td class="">{{obj.marketCap}}</td>
+        <td class="">{{obj.openPrice}}</td>
+        <td class="">{{obj.previousClosingPrice}}</td>
+        <td class="">{{obj.dividend}}</td>
+        <td class="">{{obj.volume}}</td>
+        <td class=""><button  id="'row'+i" (click)="saveStock(obj)"
+                class="hover-class">Save</button></td>
+
+    </tr>
+</table>
+

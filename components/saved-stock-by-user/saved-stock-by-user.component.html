@@ -1,0 +1,32 @@
+<div class="head">
+    <p>SAVED STOCKS</p>
+</div>
+
+<table class="table table-hover mt">
+    <tr class="tablehead">
+        <th scope="col">Company Name</th>
+        <th> Symbol</th>
+        <th>Price</th>
+        <th>Market Cap</th>
+        <th>Opening Price</th>
+        <th>Previous closing price</th>
+        <th>Dividend</th>
+        <th>Volume</th>
+        <th>Action</th>
+
+    </tr>
+    <!-- id="{{'row'+i}}" -->
+    <tr class="damn" *ngFor="let obj of StocksArray; let i = index ">
+        <td id="name" class="">{{obj.companyName}}</td>
+        <td class="">{{obj.companySymbol}}</td>
+        <td class="">{{obj.price}}</td>
+        <td class="">{{obj.marketCap}}</td>
+        <td class="">{{obj.openPrice}}</td>
+        <td class="">{{obj.previousClosingPrice}}</td>
+        <td class="">{{obj.dividend}}</td>
+        <td class="">{{obj.volume}}</td>      
+        <td class=""><button style="border-radius: 5px;" id="'row'+i" (click)="deleteStock(obj)" class="hover-class">Delete</button></td>
+
+    </tr>
+</table>
+

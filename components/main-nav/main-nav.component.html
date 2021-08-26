@@ -1,0 +1,72 @@
+<mat-sidenav-container  class="sidenav-container">
+  <mat-sidenav  *ngIf="loggedIn " #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <!-- <mat-toolbar  *ngIf="loggedIn " class="help" >Menu</mat-toolbar>
+    <mat-nav-list *ngIf="loggedIn ">
+      <a mat-list-item  href="savedstocks" routerLink="savedstocks">Saved Stocks</a>    
+      <a mat-list-item href="topstocks" routerLink="topstocks">Top Performing Stocks</a>      
+      <ul><button>large</button></ul>
+      <ul><button>small</button></ul> 
+      <ul><button>Mid</button></ul>
+      <a  mat-list-item href="niftystocks" routerLink="niftystocks">Nifty Stocks</a>
+    </mat-nav-list> -->
+    <nav class="sidebar">
+      <div class="text">
+        <img style="width: 100px; height: 80px;" src="../../../assets/icon.jpeg"/>
+      </div>
+      <ul>
+        <!-- <li class="active"><a mat-list-item href="niftystocks" routerLink="niftystocks">Nifty Stocks</a></li> -->
+        <li>
+          <a mat-list-item >Nifty Stocks<span class="fas fa-caret-down"></span></a>
+          <ul class="feat-show">
+             <li><a routerLink="largenifty" >Large Cap</a></li>
+            <li><a href=""  routerLink="midnifty">Mid Cap</a></li>
+            <li><a routerLink="smallnifty">Small Cap</a></li>
+          </ul>
+        </li>
+        <li>
+          <a mat-list-item>Top Stocks</a>
+          <ul class="feat-show">
+            <li><a  routerLink="toplarge" >Large Cap</a></li>
+            <li><a  routerLink="topmid">Mid Cap</a></li>
+            <li><a  routerLink="topsmall" >Small Cap</a></li>
+            
+          </ul>
+        </li>
+        <!-- <li><a mat-list-item href="topstocks" routerLink="topstocks">Top Stocks</a></li> -->
+        <li><a mat-list-item href="savedstocks" routerLink="savedstocks" class="save">Saved Stocks</a></li>        
+      </ul>
+    </nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="top-nav">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon class="menu" aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+     <!-- <span *ngIf="loggedIn">OkMoney-master</span> -->
+      <!--  <span class="spacer"></span> -->
+
+      <span><a *ngIf="!loggedIn" mat-icon-button style="color:white; font-weight: 600;" routerLink="/">OK Money</a></span>
+      <!-- <div class="text">
+        <img style="width: 80px; height: 80px;" src="../../../assets/icon.jpeg" />
+      </div> -->
+      <span class="spacer"></span>
+      <a *ngIf="!loggedIn" mat-icon-button routerLink="login"
+        style="color:white; font-weight: 600; width: auto; height: auto;">Login</a>
+      <a *ngIf="loggedIn" mat-icon-button style="margin-right: 50px; color:white; font-weight: 700 !important;">{{user}}</a>
+      <a *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button
+        style="margin-right: 50px; color:white; font-weight: 700 !important; size: 70px !important;">LogOut</a>
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
